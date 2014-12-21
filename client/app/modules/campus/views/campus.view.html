@@ -1,0 +1,27 @@
+<div class="container top">
+  <div class="row">
+    <section class="col-md-12 panel">
+      <div class="row">
+        <h1 class="panel-heading color-blue-400" text-white>
+          Campus
+          <a
+             class="btn btn-clear pull-right"
+             ui-sref="campus-create"
+             y-icon='plus'></a>
+        </h1>
+        <ul class="list-group">
+          <li
+              ng-repeat="campu in vm.campus"
+              ui-sref="campus-detail({campuId: campu._id})"
+              point
+              class="list-group-item">
+              <p>
+                {{campu.title}}
+              </p>
+
+          </li>
+        </ul>
+        </div>
+    </section>
+  </div>
+</div>
